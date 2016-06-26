@@ -125,4 +125,5 @@ ADD_SUBDIRECTORY(devices)
 ADD_SUBDIRECTORY(tools/obj2xml)
 ADD_SUBDIRECTORY(tools/vrml2xml)
 ADD_SUBDIRECTORY(tools/xml2obj)
+ADD_SUBDIRECTORY(tools/nsi)
  
