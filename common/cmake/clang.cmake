@@ -22,7 +22,7 @@ SET(FLAGS_AVX2  "-mavx2 -mvzeroupper")
 
 SET(CMAKE_CXX_COMPILER "clang++")
 SET(CMAKE_C_COMPILER "clang")
-SET(CMAKE_CXX_FLAGS "-fPIC -fvisibility-inlines-hidden -fvisibility=hidden")
+SET(CMAKE_CXX_FLAGS "-fPIC -fvisibility-inlines-hidden -fvisibility=hidden -stdlib=libc++")
 SET(CMAKE_CXX_FLAGS_DEBUG "-DDEBUG -g -O0 -ftree-ter")
 SET(CMAKE_CXX_FLAGS_RELEASE "-DNDEBUG -g -O3 -Wstrict-aliasing=0 -ffast-math ")
 SET(CMAKE_EXE_LINKER_FLAGS "")

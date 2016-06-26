@@ -16,8 +16,13 @@
 %}
 
 %%
+
 [ \r\t\n]                     {}
+
+-?[1-9][0-9]*                 { yylval->ival = 0; sscanf(yytext, "%d", &yylval->ival); return INTEGER; }
+
 [-+]?[0-9]*\.?[0-9]+          { yylval->fval = 0; sscanf(yytext, "%f", &yylval->fval); return FLOAT; }
+
 \"[^\"]*\"                    { yylval->sval = yytext; return STRING; }
 
 "["                           { return '['; }

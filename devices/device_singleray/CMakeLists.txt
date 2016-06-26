@@ -57,7 +57,7 @@ IF (__XEON__)
 
   ADD_LIBRARY(device_singleray SHARED ${SOURCES})
   SET_TARGET_PROPERTIES(device_singleray PROPERTIES COMPILE_FLAGS "${SINGLE_RAY_FLAGS}")
-  TARGET_LINK_LIBRARIES(device_singleray sys ${EMBREE_LIBRARY} image)
+  TARGET_LINK_LIBRARIES(device_singleray sys ${EMBREE_LIBRARY} image ${ZLIB_LIBRARIES})
 
 ELSE ()
   INCLUDE(icc_mic)

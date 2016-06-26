@@ -113,6 +113,8 @@ IF(EMBREE_FOUND)
   INCLUDE_DIRECTORIES_ISPC(${EMBREE_INCLUDE_PATH})
 ENDIF(EMBREE_FOUND)
 
+FIND_PACKAGE(ZLIB REQUIRED)
+
 ##############################################################
 # directories to compile
 ##############################################################

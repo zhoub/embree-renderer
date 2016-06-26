@@ -72,7 +72,7 @@ ENDIF ()
 
 IF (__XEON__)
   ADD_ISPC_LIBRARY(device_ispc SHARED ${ISPC_SOURCES} ${SOURCES})
-  TARGET_LINK_LIBRARIES(device_ispc sys image ${EMBREE_LIBRARY})
+  TARGET_LINK_LIBRARIES(device_ispc sys image ${EMBREE_LIBRARY} ${ZLIB_LIBRARIES})
 ELSE ()
   INCLUDE (icc_mic)
   ADD_ISPC_EXECUTABLE(device_ispc_knc ${ISPC_SOURCES} ${SOURCES})
